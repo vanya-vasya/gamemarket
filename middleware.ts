@@ -1,29 +1,22 @@
-import { NextResponse, type NextFetchEvent, type NextRequest } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 
-// Do not import @clerk/nextjs at module scope. On Vercel's edge runtime that
-// import throws while the module is evaluated when the publishable key is
-// missing, and every request dies before this function runs.
-export default async function middleware(req: NextRequest, event: NextFetchEvent) {
-  const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
-  const secretKey = process.env.CLERK_SECRET_KEY;
-  const isDashboard = req.nextUrl.pathname.startsWith("/dashboard");
-
-  if (!publishableKey || !secretKey) {
-    if (isDashboard) {
-      const url = req.nextUrl.clone();
-      url.pathname = "/login";
-      return NextResponse.redirect(url);
-    }
-    const response = NextResponse.next();
-    response.headers.set("x-gm-auth", "off");
-    return response;
+// Clerk stays out of this file on purpose. Importing @clerk/nextjs here is
+// evaluated on Vercel's edge runtime and crashes every request when
+// NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY is unset. When both Clerk keys are added
+// to the project, switch this back to clerkMiddleware so auth() can see the
+// session. Until then, dashboard routes bounce to /login.
+export function middleware(req: NextRequest) {
+  const configured = Boolean(
+    process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY && process.env.CLERK_SECRET_KEY,
+  );
+  if (!configured && req.nextUrl.pathname.startsWith("/dashboard")) {
+    const url = req.nextUrl.clone();
+    url.pathname = "/login";
+    return NextResponse.redirect(url);
   }
-
-  const { clerkMiddleware } = await import("@clerk/nextjs/server");
-  const withClerk = clerkMiddleware(async (auth, request) => {
-    if (request.nextUrl.pathname.startsWith("/dashboard")) await auth.protect();
-  });
-  return withClerk(req, event);
+  const response = NextResponse.next();
+  if (!configured) response.headers.set("x-gm-auth", "off");
+  return response;
 }
 
 export const config = {
