@@ -13,7 +13,12 @@ import {
 
 const runId = customAlphabet("0123456789abcdefghijklmnopqrstuvwxyz", 10);
 
-const openai = new OpenAI();
+let openaiClient: OpenAI | undefined;
+
+function getOpenAI() {
+  if (!openaiClient) openaiClient = new OpenAI();
+  return openaiClient;
+}
 
 const IMAGE_QUALITY = (process.env.IMAGE_QUALITY ?? "low") as
   | "low"
@@ -109,7 +114,7 @@ const generateOneImage = async (opts: {
       ? await toFile(mask.bytes, "mask.png", { type: "image/png" })
       : undefined;
     if (stream) {
-      const events = await openai.images.edit(
+      const events = await getOpenAI().images.edit(
         {
           model: "gpt-image-1",
           image: inputFiles.length === 1 ? inputFiles[0] : inputFiles,
@@ -134,7 +139,7 @@ const generateOneImage = async (opts: {
       if (!final) throw new Error("The model returned no image");
       return Buffer.from(final, "base64");
     }
-    const result = await openai.images.edit(
+    const result = await getOpenAI().images.edit(
       {
         model: "gpt-image-1",
         image: inputFiles.length === 1 ? inputFiles[0] : inputFiles,
@@ -151,7 +156,7 @@ const generateOneImage = async (opts: {
   }
 
   if (stream) {
-    const events = await openai.images.generate(
+    const events = await getOpenAI().images.generate(
       {
         model: "gpt-image-1",
         prompt,
@@ -175,7 +180,7 @@ const generateOneImage = async (opts: {
     return Buffer.from(final, "base64");
   }
 
-  const result = await openai.images.generate(
+  const result = await getOpenAI().images.generate(
     {
       model: "gpt-image-1",
       prompt,
@@ -331,7 +336,7 @@ export const executeRun = async (opts: {
       if (tool.slug === "transcribe") {
         const audio = files.find((file) => file.id === "audio");
         if (!audio) throw new Error("No audio file uploaded");
-        const transcription = await openai.audio.transcriptions.create(
+        const transcription = await getOpenAI().audio.transcriptions.create(
           {
             model: "gpt-4o-transcribe",
             file: await toFile(audio.bytes, audio.name || "audio.mp3", {
@@ -357,7 +362,7 @@ export const executeRun = async (opts: {
             },
           });
         }
-        const stream = await openai.chat.completions.create(
+        const stream = await getOpenAI().chat.completions.create(
           {
             model: "gpt-4o-mini",
             messages: [{ role: "user", content: userContent }],
@@ -382,7 +387,7 @@ export const executeRun = async (opts: {
     if (tool.output.kind === "audio") {
       if (!params.text?.trim()) throw new Error("No text to voice");
       const voice = OPENAI_VOICES[params.voice ?? ""] ?? "coral";
-      const speech = await openai.audio.speech.create(
+      const speech = await getOpenAI().audio.speech.create(
         {
           model: "gpt-4o-mini-tts",
           voice,
