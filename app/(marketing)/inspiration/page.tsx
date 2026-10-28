@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { desc } from "drizzle-orm";
 import { db, inspirationPosts } from "@/lib/db";
+import { SEED_POSTS } from "@/lib/inspiration-seed";
 import { getTool } from "@/lib/registry";
 
 export const metadata: Metadata = {
@@ -14,14 +15,22 @@ export const metadata: Metadata = {
 
 export const dynamic = "force-dynamic";
 
+async function loadPosts() {
+  try {
+    return await db
+      .select()
+      .from(inspirationPosts)
+      .orderBy(desc(inspirationPosts.publishedAt), desc(inspirationPosts.id));
+  } catch {
+    return SEED_POSTS.map((post, index) => ({ id: index + 1, ...post }));
+  }
+}
+
 export default async function InspirationPage(props: {
   searchParams: Promise<{ tool?: string }>;
 }) {
   const { tool: toolFilter } = await props.searchParams;
-  const posts = await db
-    .select()
-    .from(inspirationPosts)
-    .orderBy(desc(inspirationPosts.publishedAt), desc(inspirationPosts.id));
+  const posts = await loadPosts();
 
   const counts = new Map<string, number>();
   for (const post of posts) {

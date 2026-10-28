@@ -8,11 +8,20 @@ import { getTool } from "@/lib/registry";
 
 export const dynamic = "force-dynamic";
 
+async function findRun(runId: string) {
+  try {
+    const [run] = await db.select().from(runs).where(eq(runs.id, runId));
+    return run ?? null;
+  } catch {
+    return null;
+  }
+}
+
 export const generateMetadata = async (props: {
   params: Promise<{ runId: string }>;
 }): Promise<Metadata> => {
   const { runId } = await props.params;
-  const [run] = await db.select().from(runs).where(eq(runs.id, runId));
+  const run = await findRun(runId);
   if (!run) return {};
   const tool = getTool(run.toolSlug);
   return {
@@ -34,7 +43,7 @@ export default async function ResultPage(props: {
   params: Promise<{ runId: string }>;
 }) {
   const { runId } = await props.params;
-  const [run] = await db.select().from(runs).where(eq(runs.id, runId));
+  const run = await findRun(runId);
   if (!run || run.status !== "done") notFound();
 
   const tool = getTool(run.toolSlug);

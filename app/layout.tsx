@@ -27,8 +27,23 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+  const tree = (
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} page-glow min-h-screen font-sans`}
+      >
+        {children}
+        <Toaster theme="light" position="bottom-right" />
+      </body>
+    </html>
+  );
+
+  if (!publishableKey) return tree;
+
   return (
     <ClerkProvider
+      publishableKey={publishableKey}
       appearance={{
         variables: {
           colorPrimary: "#a855f7",
@@ -40,14 +55,7 @@ export default function RootLayout({
       signInUrl="/login"
       signUpUrl="/signup"
     >
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} page-glow min-h-screen font-sans`}
-        >
-          {children}
-          <Toaster theme="light" position="bottom-right" />
-        </body>
-      </html>
+      {tree}
     </ClerkProvider>
   );
 }

@@ -11,7 +11,10 @@ const NAV = [
 ];
 
 export const SiteHeader = async () => {
-  const { userId } = await auth();
+  const clerkReady = Boolean(
+    process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY && process.env.CLERK_SECRET_KEY,
+  );
+  const userId = clerkReady ? (await auth()).userId : null;
   const balance = userId ? await getBalance(userId) : null;
 
   return (
