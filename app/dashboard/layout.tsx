@@ -15,6 +15,8 @@ import { Logo } from "@/components/logo";
 import { getBalance } from "@/lib/credits";
 import { ensureUser } from "@/lib/users";
 
+export const dynamic = "force-dynamic";
+
 const NAV = [
   { href: "/dashboard", label: "Overview", icon: LayoutGrid },
   { href: "/dashboard/tools", label: "Tools", icon: Wrench },

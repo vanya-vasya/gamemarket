@@ -4,12 +4,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { db, runs } from "@/lib/db";
 import { getTool } from "@/lib/registry";
-import { ensureUser } from "@/lib/users";
+import { requireUser } from "@/lib/users";
 
 export const metadata: Metadata = { title: "My gallery" };
 
 export default async function GalleryPage() {
-  const user = (await ensureUser())!;
+  const user = await requireUser();
   const doneRuns = await db
     .select()
     .from(runs)

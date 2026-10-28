@@ -6,14 +6,14 @@ import { ToolCard } from "@/components/tool-card";
 import { getBalance } from "@/lib/credits";
 import { db, runs } from "@/lib/db";
 import { getTool } from "@/lib/registry";
-import { ensureUser } from "@/lib/users";
+import { requireUser } from "@/lib/users";
 
 export const metadata: Metadata = { title: "Overview" };
 
 const FEATURED = ["photo-studio", "retouch", "product-shot", "fitting-room"];
 
 export default async function DashboardPage() {
-  const user = (await ensureUser())!;
+  const user = await requireUser();
   const balance = await getBalance(user.id);
   const recentRuns = await db
     .select()

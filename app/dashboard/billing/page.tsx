@@ -5,12 +5,12 @@ import Link from "next/link";
 import { getBalance } from "@/lib/credits";
 import { db, purchases } from "@/lib/db";
 import { PACKS, formatPrice, getPack } from "@/lib/packs";
-import { ensureUser } from "@/lib/users";
+import { requireUser } from "@/lib/users";
 
 export const metadata: Metadata = { title: "Credits" };
 
 export default async function BillingPage() {
-  const user = (await ensureUser())!;
+  const user = await requireUser();
   const [balance, userPurchases] = await Promise.all([
     getBalance(user.id),
     db

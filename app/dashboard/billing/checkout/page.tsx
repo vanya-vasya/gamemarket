@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { db, purchases } from "@/lib/db";
 import { formatPrice, getPack } from "@/lib/packs";
-import { ensureUser } from "@/lib/users";
+import { ensureUser, requireUser } from "@/lib/users";
 
 export const metadata: Metadata = { title: "Checkout" };
 
@@ -62,7 +62,7 @@ export default async function CheckoutPage(props: {
   searchParams: Promise<{ pack?: string; state?: string }>;
 }) {
   const { pack: packId, state } = await props.searchParams;
-  const user = (await ensureUser())!;
+  const user = await requireUser();
   const pack = getPack(packId ?? "");
   if (!pack) notFound();
 

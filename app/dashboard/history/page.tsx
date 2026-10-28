@@ -4,7 +4,7 @@ import Link from "next/link";
 import { getLedger } from "@/lib/credits";
 import { db, runs } from "@/lib/db";
 import { getTool } from "@/lib/registry";
-import { ensureUser } from "@/lib/users";
+import { requireUser } from "@/lib/users";
 
 export const metadata: Metadata = { title: "History" };
 
@@ -25,7 +25,7 @@ const formatWhen = (date: Date) =>
   date.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit" });
 
 export default async function HistoryPage() {
-  const user = (await ensureUser())!;
+  const user = await requireUser();
   const [userRuns, ledger] = await Promise.all([
     db
       .select()

@@ -6,7 +6,9 @@ import { ToolCard } from "@/components/tool-card";
 import { Workspace } from "@/components/workspace/workspace";
 import { getBalance } from "@/lib/credits";
 import { CATEGORIES, getTool, getToolsByCategory, TOOLS } from "@/lib/registry";
-import { ensureUser } from "@/lib/users";
+import { requireUser } from "@/lib/users";
+
+export const dynamic = "force-dynamic";
 
 export const generateStaticParams = () =>
   TOOLS.map((tool) => ({ slug: tool.slug }));
@@ -26,7 +28,7 @@ export default async function WorkspacePage(props: {
   const tool = getTool(slug);
   if (!tool) notFound();
 
-  const user = (await ensureUser())!;
+  const user = await requireUser();
   const balance = await getBalance(user.id);
   const category = CATEGORIES.find((item) => item.id === tool.category)!;
   const siblings = getToolsByCategory(tool.category)

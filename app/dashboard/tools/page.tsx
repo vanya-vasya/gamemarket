@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { ToolCard } from "@/components/tool-card";
 import { getBalance } from "@/lib/credits";
 import { CATEGORIES, getToolsByCategory } from "@/lib/registry";
-import { ensureUser } from "@/lib/users";
+import { requireUser } from "@/lib/users";
 
 export const metadata: Metadata = { title: "Tools" };
 
 export default async function DashboardToolsPage() {
-  const user = (await ensureUser())!;
+  const user = await requireUser();
   const balance = await getBalance(user.id);
 
   return (

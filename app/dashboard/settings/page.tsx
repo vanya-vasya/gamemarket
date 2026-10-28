@@ -2,12 +2,12 @@ import { SignOutButton } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getBalance } from "@/lib/credits";
-import { ensureUser } from "@/lib/users";
+import { requireUser } from "@/lib/users";
 
 export const metadata: Metadata = { title: "Settings" };
 
 export default async function SettingsPage() {
-  const user = (await ensureUser())!;
+  const user = await requireUser();
   const balance = await getBalance(user.id);
 
   const rows = [

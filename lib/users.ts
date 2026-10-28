@@ -1,6 +1,7 @@
 import { cache } from "react";
 import { currentUser } from "@clerk/nextjs/server";
 import { eq } from "drizzle-orm";
+import { redirect } from "next/navigation";
 import { creditLedger, db, users } from "@/lib/db";
 import { WELCOME_CREDITS } from "@/lib/packs";
 
@@ -63,6 +64,12 @@ export const provisionUser = async (params: {
  * Wrapped in React cache() so layout and page share one call per request.
  */
 export const ensureUser = cache(async (): Promise<AppUser | null> => {
+  if (
+    !process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ||
+    !process.env.CLERK_SECRET_KEY
+  ) {
+    return null;
+  }
   const clerkUser = await currentUser();
   if (!clerkUser) return null;
   const email =
@@ -75,6 +82,12 @@ export const ensureUser = cache(async (): Promise<AppUser | null> => {
     null;
   return provisionUser({ id: clerkUser.id, email, name });
 });
+
+export const requireUser = async (): Promise<AppUser> => {
+  const user = await ensureUser();
+  if (!user) redirect("/login");
+  return user;
+};
 
 export const handleFor = (user: { name: string | null; email: string }) => {
   const base = user.name?.trim() || user.email.split("@")[0];

@@ -8,6 +8,12 @@ export const runtime = "nodejs";
 export const maxDuration = 300;
 
 export async function POST(req: NextRequest) {
+  if (
+    !process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ||
+    !process.env.CLERK_SECRET_KEY
+  ) {
+    return NextResponse.json({ error: "Sign in to run tools" }, { status: 401 });
+  }
   const { userId } = await auth();
   if (!userId) {
     return NextResponse.json({ error: "Sign in to run tools" }, { status: 401 });
