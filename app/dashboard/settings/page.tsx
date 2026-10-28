@@ -1,4 +1,3 @@
-import { SignOutButton } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getBalance } from "@/lib/credits";
@@ -61,14 +60,12 @@ export default async function SettingsPage() {
             You can sign back in any time — the credits stay put.
           </p>
         </div>
-        <SignOutButton redirectUrl="/">
-          <button
-            type="button"
-            className="rounded-full border border-red-300 px-5 py-2.5 text-sm text-red-600 transition-colors hover:border-red-500"
-          >
-            Sign out
-          </button>
-        </SignOutButton>
+        <Link
+          href="/"
+          className="rounded-full border border-zinc-300 px-5 py-2.5 text-sm text-zinc-700 transition-colors hover:border-zinc-400"
+        >
+          Back to site
+        </Link>
       </section>
     </div>
   );

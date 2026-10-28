@@ -1,5 +1,4 @@
 import { cache } from "react";
-import { currentUser } from "@clerk/nextjs/server";
 import { eq } from "drizzle-orm";
 import { redirect } from "next/navigation";
 import { creditLedger, db, users } from "@/lib/db";
@@ -70,6 +69,7 @@ export const ensureUser = cache(async (): Promise<AppUser | null> => {
   ) {
     return null;
   }
+  const { currentUser } = await import("@clerk/nextjs/server");
   const clerkUser = await currentUser();
   if (!clerkUser) return null;
   const email =

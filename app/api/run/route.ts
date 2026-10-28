@@ -1,4 +1,3 @@
-import { auth } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
 import { executeRun, type RunEvent, type RunFile } from "@/lib/engine";
 import { getTool } from "@/lib/registry";
@@ -14,6 +13,7 @@ export async function POST(req: NextRequest) {
   ) {
     return NextResponse.json({ error: "Sign in to run tools" }, { status: 401 });
   }
+  const { auth } = await import("@clerk/nextjs/server");
   const { userId } = await auth();
   if (!userId) {
     return NextResponse.json({ error: "Sign in to run tools" }, { status: 401 });

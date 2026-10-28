@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { ClerkProvider } from "@clerk/nextjs";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster } from "sonner";
 import "./globals.css";
@@ -27,8 +26,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
-  const tree = (
+  return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} page-glow min-h-screen font-sans`}
@@ -37,25 +35,5 @@ export default function RootLayout({
         <Toaster theme="light" position="bottom-right" />
       </body>
     </html>
-  );
-
-  if (!publishableKey) return tree;
-
-  return (
-    <ClerkProvider
-      publishableKey={publishableKey}
-      appearance={{
-        variables: {
-          colorPrimary: "#a855f7",
-          colorBackground: "#ffffff",
-          colorInput: "#ffffff",
-          borderRadius: "0.75rem",
-        },
-      }}
-      signInUrl="/login"
-      signUpUrl="/signup"
-    >
-      {tree}
-    </ClerkProvider>
   );
 }
