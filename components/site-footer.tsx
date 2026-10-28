@@ -1,58 +1,53 @@
 import Link from "next/link";
 import { Logo } from "@/components/logo";
+import { BRAND } from "@/lib/brand";
 
 const COLUMNS: { title: string; links: { href: string; label: string }[] }[] = [
   {
-    title: "Studio",
-    links: [
-      { href: "/tools", label: "All tools" },
-      { href: "/tool/photo-studio", label: "Photo Studio" },
-      { href: "/inspiration", label: "Inspiration" },
-      { href: "/pricing", label: "Pricing" },
-    ],
-  },
-  {
-    title: "Account",
-    links: [
-      { href: "/signup", label: "Create account" },
-      { href: "/login", label: "Sign in" },
-      { href: "/dashboard", label: "Dashboard" },
-      { href: "/dashboard/billing", label: "Buy credits" },
-    ],
-  },
-  {
-    title: "Company",
+    title: "Info",
     links: [
       { href: "/about", label: "About" },
-      { href: "/contact", label: "Contact" },
-      { href: "/faq", label: "FAQ" },
+      { href: "/seller", label: "Become a Seller" },
+      { href: "/terms-of-service", label: "Terms of Service" },
+      { href: "/privacy-policy", label: "Privacy Policy" },
     ],
   },
   {
-    title: "Legal",
+    title: "Quick Links",
     links: [
-      { href: "/legal/terms", label: "Terms of service" },
-      { href: "/legal/privacy", label: "Privacy policy" },
-      { href: "/legal/refunds", label: "Refund policy" },
-      { href: "/legal/acceptable-use", label: "Acceptable use" },
-      { href: "/legal/cookies", label: "Cookies" },
+      { href: "/affiliate", label: "Affiliate" },
+      { href: "/faq", label: "FAQ" },
+      { href: "/support", label: "Support" },
+      { href: "/coins-merchants", label: `${BRAND.coins} Merchants` },
+    ],
+  },
+  {
+    title: "Follow us",
+    links: [
+      { href: "https://x.com", label: "X / Twitter" },
+      { href: "https://discord.com", label: "Discord" },
+      { href: "https://youtube.com", label: "YouTube" },
+      { href: "https://tiktok.com", label: "TikTok" },
     ],
   },
 ];
 
 export const SiteFooter = () => (
-  <footer className="mt-24 border-t border-black/5">
+  <footer className="mt-24 border-t border-black/5 pb-16 md:pb-0">
     <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
-      <div className="grid gap-10 md:grid-cols-[1.2fr_repeat(4,1fr)]">
+      <div className="grid gap-10 md:grid-cols-[1.4fr_repeat(3,1fr)]">
         <div className="space-y-4">
           <Logo />
           <p className="max-w-xs text-sm leading-relaxed text-zinc-500">
-            23 AI tools on a single engine. Images, text and audio are generated
-            by OpenAI models.
+            <span className="font-semibold text-zinc-700">{BRAND.name}</span> is
+            a trusted digital marketplace for everything gaming-related. We
+            serve the gaming community by providing secure access that enhances
+            every gaming journey.
           </p>
           <p className="max-w-xs text-sm leading-relaxed text-zinc-500">
-            Uploads are processed in memory and never stored. Results live
-            behind the link you get.
+            Accounts, boosting, top ups, items and hourly services across{" "}
+            {BRAND.stats.games.toLocaleString("en-US")}+ games, all covered by{" "}
+            {BRAND.protection}.
           </p>
         </div>
         {COLUMNS.map((column) => (
@@ -64,6 +59,9 @@ export const SiteFooter = () => (
                   <Link
                     href={link.href}
                     className="text-sm text-zinc-600 transition-colors hover:text-zinc-900"
+                    {...(link.href.startsWith("http")
+                      ? { target: "_blank", rel: "noreferrer" }
+                      : {})}
                   >
                     {link.label}
                   </Link>
@@ -74,7 +72,7 @@ export const SiteFooter = () => (
         ))}
       </div>
       <p className="mt-12 border-t border-black/5 pt-6 text-xs text-zinc-400">
-        © 2026 Celunio. All rights reserved.
+        © {BRAND.year} {BRAND.name}. All rights reserved.
       </p>
     </div>
   </footer>

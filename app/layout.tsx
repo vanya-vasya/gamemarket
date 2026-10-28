@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster } from "sonner";
+import { BRAND } from "@/lib/brand";
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -11,15 +12,14 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
   ),
   title: {
-    default: "Celunio — AI photo studio in one upload",
-    template: "%s · Celunio",
+    default: `Gamers Marketplace You Can Trust | ${BRAND.name}`,
+    template: `%s | ${BRAND.name}`,
   },
-  description:
-    "23 AI tools on a single engine. Headshots, retouching, restored photos, product shots, interiors, voiceovers — pick a tool, drop in a picture and watch the result develop.",
+  description: `Buy and sell game accounts, boosting, top ups, items and hourly services across ${BRAND.stats.games.toLocaleString("en-US")}+ games. Every order is covered by ${BRAND.protection}.`,
   openGraph: {
-    siteName: "Celunio",
+    siteName: BRAND.name,
     type: "website",
-    images: ["/covers/preset-golden-hour.webp"],
+    images: ["/logo.png"],
   },
 };
 
