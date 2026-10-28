@@ -121,7 +121,7 @@ export default async function ListingPage({ params }: { params: Params }) {
           </div>
         </div>
 
-        <aside className="space-y-4 lg:sticky lg:top-24 lg:self-start">
+        <aside className="order-first space-y-4 lg:order-none lg:sticky lg:top-24 lg:self-start">
           <div className="card-panel p-6">
             <div className="flex flex-wrap gap-2">
               <span className="chip">{CATEGORY_LABELS[category]}{listing.tier ? ` · ${listing.tier}` : ""}</span>
