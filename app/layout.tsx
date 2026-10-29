@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster } from "sonner";
+import { siteImage } from "@/lib/assets";
 import { BRAND } from "@/lib/brand";
 import "./globals.css";
 
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: BRAND.name,
     type: "website",
-    images: ["/logo.png"],
+    images: [siteImage("og-default") ?? "/logo.png"],
   },
 };
 

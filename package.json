@@ -7,7 +7,10 @@
     "url": "https://github.com/vanya-vasya/gamemarket.git"
   },
   "scripts": {
+    "assets": "node scripts/build-asset-manifest.mjs",
+    "predev": "npm run assets",
     "dev": "next dev",
+    "prebuild": "npm run assets",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

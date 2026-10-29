@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GameTile } from "@/components/game-tile";
+import { gameCover } from "@/lib/assets";
 import { ListingCard } from "@/components/listing-card";
 import { MarketTabs } from "@/components/market-tabs";
 import { NewsCard } from "@/components/news-card";
@@ -40,7 +41,16 @@ export default async function GamePage({ params }: { params: Params }) {
       <Breadcrumbs items={[{ href: "/market", label: "All Markets" }, { label: game.name }]} />
 
       <section className="mt-6 flex flex-col gap-6 md:flex-row md:items-center">
-        <GameTile slug={game.slug} label={game.short} size="lg" className="size-28 shrink-0 rounded-2xl sm:size-32" />
+        <GameTile
+          slug={game.slug}
+          label={game.short}
+          src={gameCover(game.slug)}
+          alt={`${game.name} cover`}
+          size="lg"
+          sizes="128px"
+          priority
+          className="size-28 shrink-0 rounded-2xl sm:size-32"
+        />
         <div className="min-w-0">
           <div className="flex flex-wrap gap-2">
             <span className="chip">{game.platform}</span>

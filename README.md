@@ -18,6 +18,10 @@ Marketplace for game accounts, boosting, top ups, items and hourly services acro
 
 Authentication, payments and the database are intentionally not wired yet; account pages render a sign-in gate.
 
+## Images
+
+Artwork is optional and slot-based: drop files into `public/images/{games,news,sellers,merchants,site}/<id>.webp` and run `npm run assets` (runs automatically before build/dev) to refresh `lib/asset-manifest.json`. Missing images fall back to gradient tiles. The full list of 83 slots with prompts lives in `docs/image-generation-brief.md` and `docs/image-generation-tasks.json`.
+
 ## Development
 
 ```

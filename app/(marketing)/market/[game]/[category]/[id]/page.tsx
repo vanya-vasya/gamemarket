@@ -10,6 +10,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GameTile } from "@/components/game-tile";
+import { SellerAvatar } from "@/components/seller-avatar";
+import { gameCover } from "@/lib/assets";
 import { ListingCard } from "@/components/listing-card";
 import { Breadcrumbs, SectionHeading } from "@/components/page-blocks";
 import { BRAND, formatPrice } from "@/lib/brand";
@@ -72,7 +74,16 @@ export default async function ListingPage({ params }: { params: Params }) {
       <div className="mt-6 grid gap-8 lg:grid-cols-[1.3fr_1fr]">
         <div className="space-y-6">
           <div className="relative overflow-hidden rounded-2xl border border-black/8">
-            <GameTile slug={game.slug} label={game.short} size="lg" className="aspect-[16/10] w-full" />
+            <GameTile
+              slug={game.slug}
+              label={game.short}
+              src={gameCover(game.slug)}
+              alt={`${game.name} cover`}
+              size="lg"
+              sizes="(min-width: 1024px) 60vw, 100vw"
+              priority
+              className="aspect-[16/10] w-full"
+            />
             {listing.discount > 0 && (
               <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-sm font-bold text-fuchsia-600 shadow-sm">
                 -{listing.discount}%
@@ -177,9 +188,7 @@ export default async function ListingPage({ params }: { params: Params }) {
           <div className="card-panel p-6">
             <p className="section-label">Seller</p>
             <div className="mt-3 flex items-center gap-3">
-              <span className="flex size-11 items-center justify-center rounded-full bg-gradient-to-br from-fuchsia-500 to-indigo-500 text-lg font-bold text-white">
-                {seller.handle[0]}
-              </span>
+              <SellerAvatar handle={seller.handle} />
               <div>
                 <Link href={`/seller/${seller.handle}`} className="flex items-center gap-1.5 font-semibold text-zinc-900 hover:text-purple-600">
                   {seller.handle}

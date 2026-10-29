@@ -1,0 +1,840 @@
+{
+  "version": 1,
+  "model": "gemini-3-pro-image-preview",
+  "resolution": "2K",
+  "output_format": "webp (jpg/png also accepted, same basename)",
+  "style_prefix": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. ",
+  "style_suffix": " Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+  "tasks": [
+    {
+      "id": "site/home-hero",
+      "priority": 1,
+      "path": "public/images/site/home-hero.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Home page hero (right column, /)",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Floating isometric composition of marketplace objects: holographic account cards, a glowing shield, a game controller, gold coins and a chat bubble, arranged on a soft white background lit by violet-magenta-indigo gradient light; clean premium 3D render. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 1
+    },
+    {
+      "id": "site/og-default",
+      "priority": 1,
+      "path": "public/images/site/og-default.webp",
+      "aspect_ratio": "16:9",
+      "target_size": "1920x1080",
+      "used_on": "Open Graph / social share image (all pages)",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Wide social banner: abstract composition of a glowing shield, a game controller, holographic cards and coins on a white background with violet-magenta-indigo gradient glows; leave the left third of the frame almost empty (text will be overlaid later). Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 2
+    },
+    {
+      "id": "games/blood-strike",
+      "priority": 1,
+      "path": "public/images/games/blood-strike.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Blood Strike': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Mobile battle-royale shooter: a lone operator in futuristic tactical gear sprinting across a neon-lit rooftop at dusk while a shrinking violet energy dome glows on the horizon, supply pods dropping, dynamic low angle. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 3
+    },
+    {
+      "id": "games/mobile-legends-bang-bang",
+      "priority": 1,
+      "path": "public/images/games/mobile-legends-bang-bang.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Mobile Legends: Bang Bang': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Fantasy MOBA arena: three stylized hero silhouettes clashing on a glowing jungle lane between ancient ruins, spell effects in magenta and indigo, a crystal turret in the background. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 4
+    },
+    {
+      "id": "games/epic-seven",
+      "priority": 1,
+      "path": "public/images/games/epic-seven.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Epic Seven': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Anime-style fantasy RPG: a party of original heroes with ornate weapons standing on a floating sky island, celestial light rays, cel-shaded painterly look. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 5
+    },
+    {
+      "id": "games/arknights-endfield",
+      "priority": 1,
+      "path": "public/images/games/arknights-endfield.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Arknights: Endfield': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Sci-fi 3D RPG frontier: an industrial outpost with conveyor belts and energy pylons on an alien plateau under a violet twilight sky, a lone operator with a long rifle in the foreground. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 6
+    },
+    {
+      "id": "games/genshin-impact",
+      "priority": 1,
+      "path": "public/images/games/genshin-impact.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Genshin Impact': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Anime open-world fantasy vista: wind-swept cliffs with a giant ancient glowing tree, floating elemental crystals, a traveler gliding with a wing glider, golden hour blending into a violet sky. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 7
+    },
+    {
+      "id": "games/honkai-star-rail",
+      "priority": 1,
+      "path": "public/images/games/honkai-star-rail.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Honkai Star Rail': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Space-fantasy RPG: a sleek interstellar train gliding along a glowing rail through a nebula of violet and gold, distant planets, anime painterly style. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 8
+    },
+    {
+      "id": "games/zenless-zone-zero",
+      "priority": 1,
+      "path": "public/images/games/zenless-zone-zero.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Zenless Zone Zero': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Stylish urban action RPG: a neon-soaked futuristic street at night with blank holographic billboards, a cute round robot mascot creature in the foreground, graffiti textures, magenta and cyan glow. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 9
+    },
+    {
+      "id": "games/wuthering-waves",
+      "priority": 1,
+      "path": "public/images/games/wuthering-waves.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Wuthering Waves': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Open-world action RPG: a warrior in a flowing coat leaping across floating stone ruins while visible sound-wave ripples echo through the air, stormy violet sky, dramatic motion. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 10
+    },
+    {
+      "id": "games/efootball",
+      "priority": 1,
+      "path": "public/images/games/efootball.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'eFootball': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Football simulation: a striker in a plain unbranded kit volleying the ball inside a packed night stadium, floodlights, motion blur, stylized realistic render. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 11
+    },
+    {
+      "id": "games/the-seven-deadly-sins-grand-cross",
+      "priority": 1,
+      "path": "public/images/games/the-seven-deadly-sins-grand-cross.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'The Seven Deadly Sins: Grand Cross': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Anime medieval fantasy: seven knight silhouettes with glowing abstract emblems standing before a grand castle, dramatic clouds, cel-shaded. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 12
+    },
+    {
+      "id": "games/war-thunder",
+      "priority": 1,
+      "path": "public/images/games/war-thunder.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'War Thunder': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Military vehicle combat: a WWII-era fighter plane diving over a tank column crossing a river at dawn, a warship on the horizon, realistic painterly style. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 13
+    },
+    {
+      "id": "games/arena-breakout",
+      "priority": 1,
+      "path": "public/images/games/arena-breakout.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Arena Breakout': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Hardcore extraction shooter: an operator with a heavy backpack and night-vision goggles moving through a ruined warehouse, flashlight beams cutting through dust, tense atmosphere. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 14
+    },
+    {
+      "id": "games/fortnite",
+      "priority": 1,
+      "path": "public/images/games/fortnite.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Fortnite': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Vibrant stylized battle royale: a cartoon-proportioned character gliding from a colorful flying bus-like airship over a bright island with quirky buildings, saturated playful palette. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 15
+    },
+    {
+      "id": "games/maplestory-global",
+      "priority": 1,
+      "path": "public/images/games/maplestory-global.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'MapleStory Global': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Classic 2D side-scrolling MMORPG feel: a chibi adventurer with an oversized sword on a mushroom-forest platform, floating islands, pixel-inspired shapes rendered in high-res painterly style. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 16
+    },
+    {
+      "id": "games/brawl-stars",
+      "priority": 1,
+      "path": "public/images/games/brawl-stars.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Brawl Stars': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. 3v3 hero-shooter arena: chunky cartoon brawlers in a desert canyon arena with a glowing gem mine in the center, bold outlines, toy-like 3D render. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 17
+    },
+    {
+      "id": "games/neverness-to-everness",
+      "priority": 1,
+      "path": "public/images/games/neverness-to-everness.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Neverness to Everness': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Supernatural urban open world: a glowing city street at night, a sports car drifting past anomaly rifts in the sky, cherry blossoms, anime render. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 18
+    },
+    {
+      "id": "games/chaos-zero-nightmare",
+      "priority": 1,
+      "path": "public/images/games/chaos-zero-nightmare.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Chaos Zero Nightmare': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Roguelike deck-building RPG: anime heroes in a shattered dreamscape with floating blank tarot-like cards, dark violet mist, chaotic portals. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 19
+    },
+    {
+      "id": "games/roblox",
+      "priority": 1,
+      "path": "public/images/games/roblox.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Roblox': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Blocky sandbox platform: a cheerful blocky avatar with a top hat in front of a colorful voxel city with many mini-worlds floating behind, playful 3D render. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 20
+    },
+    {
+      "id": "games/one-piece-bounty-rush",
+      "priority": 1,
+      "path": "public/images/games/one-piece-bounty-rush.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'One Piece Bounty Rush': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Pirate anime 4v4 battle: an original straw-hatted pirate silhouette and crew grabbing a treasure chest on a tropical beach, cannon smoke, shonen anime style. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 21
+    },
+    {
+      "id": "games/where-winds-meet",
+      "priority": 1,
+      "path": "public/images/games/where-winds-meet.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Where Winds Meet': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Wuxia open world: a martial artist in flowing robes leaping across misty bamboo-forest rooftops of an ancient Chinese city, lanterns, ink-wash atmosphere. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 22
+    },
+    {
+      "id": "games/league-of-legends",
+      "priority": 1,
+      "path": "public/images/games/league-of-legends.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'League of Legends': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. PC MOBA splash art: an original champion with a glowing spear on a crystalline arena platform, rift energy swirling, painterly splash-art style. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 23
+    },
+    {
+      "id": "games/dragon-ball-legends",
+      "priority": 1,
+      "path": "public/images/games/dragon-ball-legends.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Dragon Ball Legends': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Martial-arts fighting game: two original spiky-haired fighters clashing mid-air with blazing energy auras, shattered rocks, shonen anime style. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 24
+    },
+    {
+      "id": "games/clash-royale",
+      "priority": 1,
+      "path": "public/images/games/clash-royale.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Clash Royale': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Real-time card strategy: a miniature battle arena with two towers and tiny cartoon troops charging across a bridge, a glowing blank card floating above, toy-like 3D. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 25
+    },
+    {
+      "id": "games/bleach-brave-souls",
+      "priority": 1,
+      "path": "public/images/games/bleach-brave-souls.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Bleach: Brave Souls': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Soul-reaper action: a black-robed swordsman with an oversized katana releasing a wave of spirit energy in a moonlit town, anime style. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 26
+    },
+    {
+      "id": "games/reverse-1999",
+      "priority": 1,
+      "path": "public/images/games/reverse-1999.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Reverse: 1999': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Time-reversing turn-based RPG: a 1920s-dressed arcanist with an umbrella on a street where raindrops fall upward and clocks melt, vintage color grading with violet accents. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 27
+    },
+    {
+      "id": "games/clash-of-clans",
+      "priority": 1,
+      "path": "public/images/games/clash-of-clans.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Clash of Clans': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Village-builder strategy: a fortified fantasy village with walls, cannons and a town hall seen from a high angle, a barbarian army approaching, cartoon 3D. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 28
+    },
+    {
+      "id": "games/summoners-war-sky-arena",
+      "priority": 1,
+      "path": "public/images/games/summoners-war-sky-arena.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Summoners War: Sky Arena': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Monster-collecting RPG: a summoner raising a glowing rune circle as elemental creatures emerge, floating sky arena, painterly fantasy. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 29
+    },
+    {
+      "id": "games/arknights",
+      "priority": 1,
+      "path": "public/images/games/arknights.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Arknights': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Tower-defense RPG: operators in tactical coats holding a rooftop chokepoint against shadowy figures, subtly glowing grid tiles on the floor, anime style. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 30
+    },
+    {
+      "id": "games/honor-of-kings",
+      "priority": 1,
+      "path": "public/images/games/honor-of-kings.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Honor of Kings': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Mobile MOBA with Chinese-mythology flavor: a warrior in ornate armor wielding a glowing halberd before a celestial palace, red and violet energy. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 31
+    },
+    {
+      "id": "games/diablo-immortal",
+      "priority": 1,
+      "path": "public/images/games/diablo-immortal.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Diablo Immortal': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Dark gothic action RPG: a demon hunter with twin crossbows in a hellish cathedral, embers and glowing legendary gems, isometric-inspired angle. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 32
+    },
+    {
+      "id": "games/last-cloudia",
+      "priority": 1,
+      "path": "public/images/games/last-cloudia.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Last Cloudia': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Fantasy RPG: a knight and a mage facing a giant crystal ark floating in the sky, a blend of pixel textures and painterly light. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 33
+    },
+    {
+      "id": "games/yu-gi-oh-master-duel",
+      "priority": 1,
+      "path": "public/images/games/yu-gi-oh-master-duel.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Yu-Gi-Oh! Master Duel': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Digital card dueling: a duelist on a holographic arena summoning a dragon out of a glowing blank card, futuristic stadium. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 34
+    },
+    {
+      "id": "games/punishing-gray-raven",
+      "priority": 1,
+      "path": "public/images/games/punishing-gray-raven.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Punishing: Gray Raven': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Sci-fi action RPG: a cyborg warrior with a glowing blade in a ruined futuristic city under a corrupted red-violet sky, fast motion. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 35
+    },
+    {
+      "id": "games/ark-survival-ascended",
+      "priority": 1,
+      "path": "public/images/games/ark-survival-ascended.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'ARK: Survival Ascended': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Dinosaur survival: a survivor riding an armored T-rex through a jungle toward a glowing obelisk tower, prehistoric creatures, cinematic realism. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 36
+    },
+    {
+      "id": "games/seven-knights-rebirth",
+      "priority": 1,
+      "path": "public/images/games/seven-knights-rebirth.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Seven Knights Re:Birth': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Hero-collector RPG: seven original armored knights posing in formation on a cliff under a stormy sky, 3D anime render. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 37
+    },
+    {
+      "id": "games/raid-shadow-legends",
+      "priority": 1,
+      "path": "public/images/games/raid-shadow-legends.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Raid: Shadow Legends': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Dark fantasy collection RPG: champions of several factions assembled in a ruined castle hall, dramatic torchlight, realistic painterly. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 38
+    },
+    {
+      "id": "games/the-seven-deadly-sins-origin",
+      "priority": 1,
+      "path": "public/images/games/the-seven-deadly-sins-origin.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'The Seven Deadly Sins: Origin': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Open-world action RPG: a young knight overlooking a vast green valley with a giant tree and floating islands, anime open-world style. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 39
+    },
+    {
+      "id": "games/goddess-of-victory-nikke",
+      "priority": 1,
+      "path": "public/images/games/goddess-of-victory-nikke.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Goddess of Victory: Nikke': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Third-person shooter RPG: a squad of original android soldiers firing from cover on a ruined rooftop at a towering mechanical monster, dramatic lighting. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 40
+    },
+    {
+      "id": "games/delta-force",
+      "priority": 1,
+      "path": "public/images/games/delta-force.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Delta Force': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Modern military shooter: operators in night-ops gear boarding a helicopter during a desert raid, dust and tracer fire, realistic render. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 41
+    },
+    {
+      "id": "games/diablo-iv",
+      "priority": 1,
+      "path": "public/images/games/diablo-iv.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Diablo IV': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Dark fantasy ARPG: a sorceress casting lightning in a blood-red cathedral against a horde of demons, embers, grim realism. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 42
+    },
+    {
+      "id": "games/valorant",
+      "priority": 1,
+      "path": "public/images/games/valorant.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Valorant': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Tactical hero shooter: stylized agents using smoke and wall abilities on a sunlit Mediterranean-style map, bold graphic shading. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 43
+    },
+    {
+      "id": "games/counter-strike-2",
+      "priority": 1,
+      "path": "public/images/games/counter-strike-2.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Counter-Strike 2': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Tactical shooter: operators stacking at a door in a dusty Middle-Eastern-style map, realistic lighting, rifles with abstract pattern skins. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 44
+    },
+    {
+      "id": "games/pubg-mobile",
+      "priority": 1,
+      "path": "public/images/games/pubg-mobile.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'PUBG Mobile': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Mobile battle royale: a player wearing a heavy helmet landing by parachute on a military island, a frying pan on the back, cinematic realism. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 45
+    },
+    {
+      "id": "games/free-fire",
+      "priority": 1,
+      "path": "public/images/games/free-fire.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Free Fire': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Mobile battle royale: a stylized character with a glowing evolving rifle on a tropical island, a translucent safe-zone wall approaching, vibrant colors. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 46
+    },
+    {
+      "id": "games/call-of-duty-mobile",
+      "priority": 1,
+      "path": "public/images/games/call-of-duty-mobile.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Call of Duty: Mobile': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Mobile shooter: a soldier with a mythic-glow weapon in a suburban test-site map, explosion in the background, action render. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 47
+    },
+    {
+      "id": "games/minecraft",
+      "priority": 1,
+      "path": "public/images/games/minecraft.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Cover for 'Minecraft': market tile, every listing card, game page hero, listing page hero, news fallback",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Voxel sandbox: a blocky landscape with a cube-built castle, blocky creatures, a square sun setting, iconic cube aesthetic in an original design. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 48
+    },
+    {
+      "id": "site/seller-hero",
+      "priority": 2,
+      "path": "public/images/site/seller-hero.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Seller page hero (/seller)",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Isometric 3D scene of a seller desk: a laptop showing abstract blank charts, stacks of coins turning into crypto tokens, a parcel with a glowing check mark, soft white background, violet gradient lighting. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 49
+    },
+    {
+      "id": "site/affiliate-hero",
+      "priority": 2,
+      "path": "public/images/site/affiliate-hero.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "Affiliate page hero (/affiliate)",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. 3D render of a smartphone emitting a glowing share-link ribbon that branches to many small avatar bubbles, coins flowing back toward the phone, soft white background, violet-indigo gradient. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 50
+    },
+    {
+      "id": "site/about-hero",
+      "priority": 2,
+      "path": "public/images/site/about-hero.webp",
+      "aspect_ratio": "4:3",
+      "target_size": "1600x1200",
+      "used_on": "About page hero (/about)",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. A globe made of glowing network nodes connecting gamer avatars across continents, controllers and shields orbiting it, white background, violet-magenta light. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 51
+    },
+    {
+      "id": "site/not-found",
+      "priority": 2,
+      "path": "public/images/site/not-found.webp",
+      "aspect_ratio": "16:9",
+      "target_size": "1600x900",
+      "used_on": "404 page illustration",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. A cute round robot mascot in violet gradient colors looking puzzled at an empty gaming chair in a bright minimal lobby, soft white background, minimal 3D render. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 52
+    },
+    {
+      "id": "sellers/gamenews",
+      "priority": 2,
+      "path": "public/images/sellers/gamenews.webp",
+      "aspect_ratio": "1:1",
+      "target_size": "512x512",
+      "used_on": "Avatar of seller 'GameNews': listing cards, listing page, seller profile /seller/GameNews",
+      "prompt": "Square profile avatar for a marketplace seller, friendly front-facing bust of an original stylized gamer character, semi-realistic 3D render, soft studio light, solid soft-violet gradient background (hex a855f7 to 6366f1), no text, no logos. Character: news-anchor style with a gaming headset and a small microphone, confident smile.",
+      "order": 53
+    },
+    {
+      "id": "sellers/zone",
+      "priority": 2,
+      "path": "public/images/sellers/zone.webp",
+      "aspect_ratio": "1:1",
+      "target_size": "512x512",
+      "used_on": "Avatar of seller 'Zone': listing cards, listing page, seller profile /seller/Zone",
+      "prompt": "Square profile avatar for a marketplace seller, friendly front-facing bust of an original stylized gamer character, semi-realistic 3D render, soft studio light, solid soft-violet gradient background (hex a855f7 to 6366f1), no text, no logos. Character: sleek character with a glowing geometric visor, cool indigo tones.",
+      "order": 54
+    },
+    {
+      "id": "sellers/lunastore",
+      "priority": 2,
+      "path": "public/images/sellers/lunastore.webp",
+      "aspect_ratio": "1:1",
+      "target_size": "512x512",
+      "used_on": "Avatar of seller 'LunaStore': listing cards, listing page, seller profile /seller/LunaStore",
+      "prompt": "Square profile avatar for a marketplace seller, friendly front-facing bust of an original stylized gamer character, semi-realistic 3D render, soft studio light, solid soft-violet gradient background (hex a855f7 to 6366f1), no text, no logos. Character: pastel-toned character with a crescent-moon hair accessory, calm expression.",
+      "order": 55
+    },
+    {
+      "id": "sellers/arcadiashop",
+      "priority": 2,
+      "path": "public/images/sellers/arcadiashop.webp",
+      "aspect_ratio": "1:1",
+      "target_size": "512x512",
+      "used_on": "Avatar of seller 'ArcadiaShop': listing cards, listing page, seller profile /seller/ArcadiaShop",
+      "prompt": "Square profile avatar for a marketplace seller, friendly front-facing bust of an original stylized gamer character, semi-realistic 3D render, soft studio light, solid soft-violet gradient background (hex a855f7 to 6366f1), no text, no logos. Character: retro-arcade themed character with pixel-shaped sunglasses, neon magenta accents.",
+      "order": 56
+    },
+    {
+      "id": "sellers/pixelvault",
+      "priority": 2,
+      "path": "public/images/sellers/pixelvault.webp",
+      "aspect_ratio": "1:1",
+      "target_size": "512x512",
+      "used_on": "Avatar of seller 'PixelVault': listing cards, listing page, seller profile /seller/PixelVault",
+      "prompt": "Square profile avatar for a marketplace seller, friendly front-facing bust of an original stylized gamer character, semi-realistic 3D render, soft studio light, solid soft-violet gradient background (hex a855f7 to 6366f1), no text, no logos. Character: character in a pixel-pattern hoodie with a small vault-door badge on the chest.",
+      "order": 57
+    },
+    {
+      "id": "sellers/novaboost",
+      "priority": 2,
+      "path": "public/images/sellers/novaboost.webp",
+      "aspect_ratio": "1:1",
+      "target_size": "512x512",
+      "used_on": "Avatar of seller 'NovaBoost': listing cards, listing page, seller profile /seller/NovaBoost",
+      "prompt": "Square profile avatar for a marketplace seller, friendly front-facing bust of an original stylized gamer character, semi-realistic 3D render, soft studio light, solid soft-violet gradient background (hex a855f7 to 6366f1), no text, no logos. Character: energetic character with rocket-flame styled hair, dynamic lighting.",
+      "order": 58
+    },
+    {
+      "id": "sellers/topupking",
+      "priority": 2,
+      "path": "public/images/sellers/topupking.webp",
+      "aspect_ratio": "1:1",
+      "target_size": "512x512",
+      "used_on": "Avatar of seller 'TopUpKing': listing cards, listing page, seller profile /seller/TopUpKing",
+      "prompt": "Square profile avatar for a marketplace seller, friendly front-facing bust of an original stylized gamer character, semi-realistic 3D render, soft studio light, solid soft-violet gradient background (hex a855f7 to 6366f1), no text, no logos. Character: character wearing a small golden crown, holding a shiny gold coin.",
+      "order": 59
+    },
+    {
+      "id": "sellers/kairo",
+      "priority": 2,
+      "path": "public/images/sellers/kairo.webp",
+      "aspect_ratio": "1:1",
+      "target_size": "512x512",
+      "used_on": "Avatar of seller 'Kairo': listing cards, listing page, seller profile /seller/Kairo",
+      "prompt": "Square profile avatar for a marketplace seller, friendly front-facing bust of an original stylized gamer character, semi-realistic 3D render, soft studio light, solid soft-violet gradient background (hex a855f7 to 6366f1), no text, no logos. Character: calm character with a baseball cap, teal accent details.",
+      "order": 60
+    },
+    {
+      "id": "sellers/queenbee",
+      "priority": 2,
+      "path": "public/images/sellers/queenbee.webp",
+      "aspect_ratio": "1:1",
+      "target_size": "512x512",
+      "used_on": "Avatar of seller 'QueenBee': listing cards, listing page, seller profile /seller/QueenBee",
+      "prompt": "Square profile avatar for a marketplace seller, friendly front-facing bust of an original stylized gamer character, semi-realistic 3D render, soft studio light, solid soft-violet gradient background (hex a855f7 to 6366f1), no text, no logos. Character: character in a black-and-yellow striped hoodie with a honeycomb accent.",
+      "order": 61
+    },
+    {
+      "id": "sellers/mythicdealer",
+      "priority": 2,
+      "path": "public/images/sellers/mythicdealer.webp",
+      "aspect_ratio": "1:1",
+      "target_size": "512x512",
+      "used_on": "Avatar of seller 'MythicDealer': listing cards, listing page, seller profile /seller/MythicDealer",
+      "prompt": "Square profile avatar for a marketplace seller, friendly front-facing bust of an original stylized gamer character, semi-realistic 3D render, soft studio light, solid soft-violet gradient background (hex a855f7 to 6366f1), no text, no logos. Character: hooded merchant character with a glowing violet mythic gem pendant.",
+      "order": 62
+    },
+    {
+      "id": "merchants/coinhub-asia",
+      "priority": 2,
+      "path": "public/images/merchants/coinhub-asia.webp",
+      "aspect_ratio": "1:1",
+      "target_size": "512x512",
+      "used_on": "Logo mark of merchant 'CoinHub Asia' on /coins-merchants",
+      "prompt": "Flat vector logo mark for a payment merchant, simple geometric symbol only, NO letters, NO words, NO numbers. Rounded-square tile with a violet-to-indigo gradient (hex d946ef, a855f7, 6366f1) background and a white symbol, centered, generous padding. Symbol: a coin shape in the middle with hub lines radiating to six small nodes.",
+      "order": 63
+    },
+    {
+      "id": "merchants/eurotopup",
+      "priority": 2,
+      "path": "public/images/merchants/eurotopup.webp",
+      "aspect_ratio": "1:1",
+      "target_size": "512x512",
+      "used_on": "Logo mark of merchant 'EuroTopUp' on /coins-merchants",
+      "prompt": "Flat vector logo mark for a payment merchant, simple geometric symbol only, NO letters, NO words, NO numbers. Rounded-square tile with a violet-to-indigo gradient (hex d946ef, a855f7, 6366f1) background and a white symbol, centered, generous padding. Symbol: a coin with a bold upward arrow.",
+      "order": 64
+    },
+    {
+      "id": "merchants/latampay-coins",
+      "priority": 2,
+      "path": "public/images/merchants/latampay-coins.webp",
+      "aspect_ratio": "1:1",
+      "target_size": "512x512",
+      "used_on": "Logo mark of merchant 'LatamPay Coins' on /coins-merchants",
+      "prompt": "Flat vector logo mark for a payment merchant, simple geometric symbol only, NO letters, NO words, NO numbers. Rounded-square tile with a violet-to-indigo gradient (hex d946ef, a855f7, 6366f1) background and a white symbol, centered, generous padding. Symbol: a rising sun half-circle above a coin.",
+      "order": 65
+    },
+    {
+      "id": "merchants/desert-coins",
+      "priority": 2,
+      "path": "public/images/merchants/desert-coins.webp",
+      "aspect_ratio": "1:1",
+      "target_size": "512x512",
+      "used_on": "Logo mark of merchant 'Desert Coins' on /coins-merchants",
+      "prompt": "Flat vector logo mark for a payment merchant, simple geometric symbol only, NO letters, NO words, NO numbers. Rounded-square tile with a violet-to-indigo gradient (hex d946ef, a855f7, 6366f1) background and a white symbol, centered, generous padding. Symbol: two smooth sand dunes with a coin rising like a sun.",
+      "order": 66
+    },
+    {
+      "id": "merchants/cryptobridge",
+      "priority": 2,
+      "path": "public/images/merchants/cryptobridge.webp",
+      "aspect_ratio": "1:1",
+      "target_size": "512x512",
+      "used_on": "Logo mark of merchant 'CryptoBridge' on /coins-merchants",
+      "prompt": "Flat vector logo mark for a payment merchant, simple geometric symbol only, NO letters, NO words, NO numbers. Rounded-square tile with a violet-to-indigo gradient (hex d946ef, a855f7, 6366f1) background and a white symbol, centered, generous padding. Symbol: an arched bridge made of two linked chain segments.",
+      "order": 67
+    },
+    {
+      "id": "merchants/sea-wallet",
+      "priority": 2,
+      "path": "public/images/merchants/sea-wallet.webp",
+      "aspect_ratio": "1:1",
+      "target_size": "512x512",
+      "used_on": "Logo mark of merchant 'SEA Wallet' on /coins-merchants",
+      "prompt": "Flat vector logo mark for a payment merchant, simple geometric symbol only, NO letters, NO words, NO numbers. Rounded-square tile with a violet-to-indigo gradient (hex d946ef, a855f7, 6366f1) background and a white symbol, centered, generous padding. Symbol: a wallet silhouette with a wave cutting across it.",
+      "order": 68
+    },
+    {
+      "id": "news/hsr-relic-crafting-self-modeling-resin",
+      "priority": 3,
+      "path": "public/images/news/hsr-relic-crafting-self-modeling-resin.webp",
+      "aspect_ratio": "16:9",
+      "target_size": "1920x1080",
+      "used_on": "Article cover for /news/hsr-relic-crafting-self-modeling-resin (news list, home news block). If skipped, the game cover games/honkai-star-rail is used.",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Editorial news illustration: a glowing relic artifact being forged inside a cosmic workshop with floating resin orbs, anime sci-fi. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 69
+    },
+    {
+      "id": "news/nikke-4th-anniversary-new-ssrs",
+      "priority": 3,
+      "path": "public/images/news/nikke-4th-anniversary-new-ssrs.webp",
+      "aspect_ratio": "16:9",
+      "target_size": "1920x1080",
+      "used_on": "Article cover for /news/nikke-4th-anniversary-new-ssrs (news list, home news block). If skipped, the game cover games/goddess-of-victory-nikke is used.",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Editorial news illustration: anniversary fireworks over a futuristic base with three silhouetted android soldiers striking poses. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 70
+    },
+    {
+      "id": "news/7ds-origin-2-3-bonus-lock-greed-incarnate-estia",
+      "priority": 3,
+      "path": "public/images/news/7ds-origin-2-3-bonus-lock-greed-incarnate-estia.webp",
+      "aspect_ratio": "16:9",
+      "target_size": "1920x1080",
+      "used_on": "Article cover for /news/7ds-origin-2-3-bonus-lock-greed-incarnate-estia (news list, home news block). If skipped, the game cover games/the-seven-deadly-sins-origin is used.",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Editorial news illustration: a glowing padlock icon hovering over a weapon forge inside a fantasy kingdom, fire mage silhouette in the background. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 71
+    },
+    {
+      "id": "news/delta-force-ravens-deal-halloween-rewards",
+      "priority": 3,
+      "path": "public/images/news/delta-force-ravens-deal-halloween-rewards.webp",
+      "aspect_ratio": "16:9",
+      "target_size": "1920x1080",
+      "used_on": "Article cover for /news/delta-force-ravens-deal-halloween-rewards (news list, home news block). If skipped, the game cover games/delta-force is used.",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Editorial news illustration: a military outpost decorated with jack-o-lanterns at night, a raven perched on a supply crate, eerie fog. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 72
+    },
+    {
+      "id": "news/diablo-iv-season-16-ptr",
+      "priority": 3,
+      "path": "public/images/news/diablo-iv-season-16-ptr.webp",
+      "aspect_ratio": "16:9",
+      "target_size": "1920x1080",
+      "used_on": "Article cover for /news/diablo-iv-season-16-ptr (news list, home news block). If skipped, the game cover games/diablo-iv is used.",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Editorial news illustration: golden angelic feathers drifting down into a dark gothic cathedral, demons lurking in the shadows. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 73
+    },
+    {
+      "id": "news/world-war-z-viral-state-florida-update",
+      "priority": 3,
+      "path": "public/images/news/world-war-z-viral-state-florida-update.webp",
+      "aspect_ratio": "16:9",
+      "target_size": "1920x1080",
+      "used_on": "Article cover for /news/world-war-z-viral-state-florida-update (news list, home news block). If skipped, the game cover games/world-war-z-aftermath is used.",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Editorial news illustration: a zombie horde surging through a flooded sunny suburb with palm trees and a distant theme-park ferris wheel. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 74
+    },
+    {
+      "id": "news/genshin-impact-overflowing-favor-double-artifact-drops",
+      "priority": 3,
+      "path": "public/images/news/genshin-impact-overflowing-favor-double-artifact-drops.webp",
+      "aspect_ratio": "16:9",
+      "target_size": "1920x1080",
+      "used_on": "Article cover for /news/genshin-impact-overflowing-favor-double-artifact-drops (news list, home news block). If skipped, the game cover games/genshin-impact is used.",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Editorial news illustration: a treasure chest overflowing with glowing artifacts inside a fantasy domain of stone pillars and elemental light. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 75
+    },
+    {
+      "id": "news/arena-breakout-infinite-halloween-mysterious-night",
+      "priority": 3,
+      "path": "public/images/news/arena-breakout-infinite-halloween-mysterious-night.webp",
+      "aspect_ratio": "16:9",
+      "target_size": "1920x1080",
+      "used_on": "Article cover for /news/arena-breakout-infinite-halloween-mysterious-night (news list, home news block). If skipped, the game cover games/arena-breakout is used.",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Editorial news illustration: a night raid through a foggy farm with glowing pumpkins, a looming boss figure silhouetted against the moon. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 76
+    },
+    {
+      "id": "news/reverse-1999-3-9-hedone-narcissus-free-summons",
+      "priority": 3,
+      "path": "public/images/news/reverse-1999-3-9-hedone-narcissus-free-summons.webp",
+      "aspect_ratio": "16:9",
+      "target_size": "1920x1080",
+      "used_on": "Article cover for /news/reverse-1999-3-9-hedone-narcissus-free-summons (news list, home news block). If skipped, the game cover games/reverse-1999 is used.",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Editorial news illustration: a 1920s seaside summer festival with vintage boats on a golden sea, raindrops falling upward, retro color grading. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 77
+    },
+    {
+      "id": "news/zzz-cyber-miracle-healer-free-polychromes",
+      "priority": 3,
+      "path": "public/images/news/zzz-cyber-miracle-healer-free-polychromes.webp",
+      "aspect_ratio": "16:9",
+      "target_size": "1920x1080",
+      "used_on": "Article cover for /news/zzz-cyber-miracle-healer-free-polychromes (news list, home news block). If skipped, the game cover games/zenless-zone-zero is used.",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Editorial news illustration: cute round robot mascot creatures being repaired on a neon-lit workbench, sparks and holographic tools. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 78
+    },
+    {
+      "id": "news/fortnite-final-spritemare-daily-boosts",
+      "priority": 3,
+      "path": "public/images/news/fortnite-final-spritemare-daily-boosts.webp",
+      "aspect_ratio": "16:9",
+      "target_size": "1920x1080",
+      "used_on": "Article cover for /news/fortnite-final-spritemare-daily-boosts (news list, home news block). If skipped, the game cover games/fortnite is used.",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Editorial news illustration: a cartoon spooky forest at night filled with glowing floating sprites, Halloween orange and violet palette. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 79
+    },
+    {
+      "id": "news/efootball-epic-italian-league-attackers",
+      "priority": 3,
+      "path": "public/images/news/efootball-epic-italian-league-attackers.webp",
+      "aspect_ratio": "16:9",
+      "target_size": "1920x1080",
+      "used_on": "Article cover for /news/efootball-epic-italian-league-attackers (news list, home news block). If skipped, the game cover games/efootball is used.",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Editorial news illustration: three retro-era football stars in plain blue kits celebrating in a stadium, vintage film grain. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 80
+    },
+    {
+      "id": "news/wuthering-waves-2-8-phrolova-banner-guide",
+      "priority": 3,
+      "path": "public/images/news/wuthering-waves-2-8-phrolova-banner-guide.webp",
+      "aspect_ratio": "16:9",
+      "target_size": "1920x1080",
+      "used_on": "Article cover for /news/wuthering-waves-2-8-phrolova-banner-guide (news list, home news block). If skipped, the game cover games/wuthering-waves is used.",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Editorial news illustration: a dark-coat warrior surrounded by purple sound waves over a dreamlike lost landscape, stormy sky. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 81
+    },
+    {
+      "id": "news/mlbb-m8-world-championship-skins",
+      "priority": 3,
+      "path": "public/images/news/mlbb-m8-world-championship-skins.webp",
+      "aspect_ratio": "16:9",
+      "target_size": "1920x1080",
+      "used_on": "Article cover for /news/mlbb-m8-world-championship-skins (news list, home news block). If skipped, the game cover games/mobile-legends-bang-bang is used.",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Editorial news illustration: an esports world-championship stage with a glowing trophy, confetti and stage lights, no text on screens. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 82
+    },
+    {
+      "id": "news/epic-seven-ml-kayron-rerun",
+      "priority": 3,
+      "path": "public/images/news/epic-seven-ml-kayron-rerun.webp",
+      "aspect_ratio": "16:9",
+      "target_size": "1920x1080",
+      "used_on": "Article cover for /news/epic-seven-ml-kayron-rerun (news list, home news block). If skipped, the game cover games/epic-seven is used.",
+      "prompt": "Premium digital key art for a gaming marketplace website. Original artwork only: no real game characters, no logos, no brand names, no letters, no numbers, no UI, no watermark. Editorial news illustration: a moonlit anime swordsman with dark feathered wings standing on a gothic rooftop. Cinematic lighting, rich detail, clean composition with the main subject inside the central 70% of the frame (edges will be cropped to square on some screens). Keep the top-left and top-right corners uncluttered (badges overlay there). Harmonize with a light UI: include violet / magenta / indigo accent light (hex d946ef, a855f7, 6366f1). 2K resolution.",
+      "order": 83
+    }
+  ]
+}

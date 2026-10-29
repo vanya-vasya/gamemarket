@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { GameTile } from "@/components/game-tile";
+import { newsCover } from "@/lib/assets";
 import { getGame } from "@/lib/games";
 import { formatDate, type Article } from "@/lib/news";
 
@@ -18,6 +19,8 @@ export const NewsCard = ({
         <GameTile
           slug={article.gameSlug}
           label={short}
+          src={newsCover(article)}
+          alt={article.title}
           size={compact ? "md" : "lg"}
           className={`w-full ${compact ? "aspect-[2/1]" : "aspect-[16/9]"} transition-transform duration-500 group-hover:scale-[1.02]`}
         />

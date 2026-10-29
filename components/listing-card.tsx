@@ -1,6 +1,8 @@
 import { BadgeCheck, Star } from "lucide-react";
 import Link from "next/link";
 import { GameTile } from "@/components/game-tile";
+import { SellerAvatar } from "@/components/seller-avatar";
+import { gameCover } from "@/lib/assets";
 import { formatPrice } from "@/lib/brand";
 import { CATEGORY_LABELS, getGame } from "@/lib/games";
 import { getSeller, type Listing } from "@/lib/listings";
@@ -19,9 +21,7 @@ export const SellerLine = ({
   if (!seller) return null;
   return (
     <span className={`flex items-center gap-1.5 text-xs text-zinc-600 ${className}`}>
-      <span className="flex size-5 items-center justify-center rounded-full bg-gradient-to-br from-fuchsia-500 to-indigo-500 text-[10px] font-bold text-white">
-        {seller.handle[0]}
-      </span>
+      <SellerAvatar handle={seller.handle} size="xs" />
       <span className="font-medium text-zinc-800">{seller.handle}</span>
       {seller.verified && (
         <BadgeCheck className="size-3.5 text-sky-500" aria-label="Verified seller" />
@@ -49,6 +49,8 @@ export const ListingCard = ({
         <GameTile
           slug={game.slug}
           label={game.short}
+          src={gameCover(game.slug)}
+          alt={`${game.name} cover`}
           size="lg"
           className="aspect-[4/3] w-full transition-transform duration-500 group-hover:scale-[1.02]"
         />

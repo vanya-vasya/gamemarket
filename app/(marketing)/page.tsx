@@ -5,11 +5,13 @@ import {
   Star,
 } from "lucide-react";
 import Link from "next/link";
+import { HeroArt, HeroGrid } from "@/components/hero-art";
 import { ListingCard } from "@/components/listing-card";
 import { MarketCard } from "@/components/market-card";
 import { NewsCard } from "@/components/news-card";
 import { Cta, FeatureGrid, SectionHeading } from "@/components/page-blocks";
 import { ReviewCard } from "@/components/review-card";
+import { siteImage } from "@/lib/assets";
 import { BRAND, formatCount } from "@/lib/brand";
 import {
   CATEGORY_LABELS,
@@ -126,7 +128,9 @@ export default function HomePage() {
     <div className="mx-auto max-w-7xl px-4 sm:px-6">
       {/* Hero */}
       <section className="py-14 md:py-20">
-        <div className="max-w-3xl">
+        <HeroGrid
+          art={<HeroArt src={siteImage("home-hero")} alt="Collage of game accounts, boosting and top ups traded on Game Sector" />}
+        >
           <span className="chip">
             {formatCount(BRAND.stats.games)} games · {formatCount(BRAND.stats.listings)} listings
           </span>
@@ -164,7 +168,7 @@ export default function HomePage() {
               <dd className="text-sm text-zinc-500">customer support</dd>
             </div>
           </dl>
-        </div>
+        </HeroGrid>
       </section>
 
       {/* Popular markets */}

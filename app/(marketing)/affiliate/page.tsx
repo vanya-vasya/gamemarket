@@ -9,8 +9,10 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HeroArt, HeroGrid } from "@/components/hero-art";
 import { ListingCard } from "@/components/listing-card";
 import { Cta, FaqList, FeatureGrid, SectionHeading } from "@/components/page-blocks";
+import { siteImage } from "@/lib/assets";
 import { BRAND } from "@/lib/brand";
 import { getNewestListings } from "@/lib/listings";
 
@@ -64,7 +66,9 @@ export default function AffiliatePage() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6">
       <section className="py-16 md:py-24">
-        <div className="max-w-3xl">
+        <HeroGrid
+          art={<HeroArt src={siteImage("affiliate-hero")} alt="Creator sharing an affiliate link and earning commission" />}
+        >
           <span className="chip">{BRAND.name} Affiliate Program</span>
           <h1 className="mt-6 text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
             Earn <span className="text-gradient">up to 50%</span> commission on every sale you refer
@@ -98,7 +102,7 @@ export default function AffiliatePage() {
               </div>
             ))}
           </dl>
-        </div>
+        </HeroGrid>
       </section>
 
       <section className="py-12">

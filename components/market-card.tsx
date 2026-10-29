@@ -1,6 +1,7 @@
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { GameTile } from "@/components/game-tile";
+import { gameCover } from "@/lib/assets";
 import { formatCount } from "@/lib/brand";
 import { gameCategories, type Game } from "@/lib/games";
 
@@ -10,6 +11,9 @@ export const MarketCard = ({ game }: { game: Game }) => (
       <GameTile
         slug={game.slug}
         label={game.short}
+        src={gameCover(game.slug)}
+        alt={`${game.name} cover`}
+        sizes="96px"
         className="size-20 rounded-xl sm:size-24"
       />
     </Link>

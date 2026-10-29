@@ -1,7 +1,9 @@
 import { BadgeCheck, Coins, Gift, Zap } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { FaqList, FeatureGrid, SectionHeading } from "@/components/page-blocks";
+import { merchantLogo } from "@/lib/assets";
 import { BRAND } from "@/lib/brand";
 
 export const metadata: Metadata = {
@@ -10,12 +12,12 @@ export const metadata: Metadata = {
 };
 
 const MERCHANTS = [
-  { name: "CoinHub Asia", region: "Indonesia · Philippines · Vietnam", methods: "Bank transfer, e-wallets, convenience stores", rate: "1 USD = 100 GSC", verified: true },
-  { name: "EuroTopUp", region: "European Union · UK", methods: "SEPA, cards, PayPal", rate: "1 USD = 100 GSC", verified: true },
-  { name: "LatamPay Coins", region: "Brazil · Mexico · Argentina", methods: "PIX, OXXO, Mercado Pago", rate: "1 USD = 100 GSC", verified: true },
-  { name: "Desert Coins", region: "MENA · Turkey", methods: "Local cards, Papara, STC Pay", rate: "1 USD = 100 GSC", verified: true },
-  { name: "CryptoBridge", region: "Worldwide", methods: "USDT, USDC, BTC, ETH", rate: "1 USD = 100 GSC", verified: true },
-  { name: "SEA Wallet", region: "Thailand · Malaysia · Singapore", methods: "PromptPay, DuitNow, PayNow", rate: "1 USD = 100 GSC", verified: false },
+  { slug: "coinhub-asia", name: "CoinHub Asia", region: "Indonesia · Philippines · Vietnam", methods: "Bank transfer, e-wallets, convenience stores", rate: "1 USD = 100 GSC", verified: true },
+  { slug: "eurotopup", name: "EuroTopUp", region: "European Union · UK", methods: "SEPA, cards, PayPal", rate: "1 USD = 100 GSC", verified: true },
+  { slug: "latampay-coins", name: "LatamPay Coins", region: "Brazil · Mexico · Argentina", methods: "PIX, OXXO, Mercado Pago", rate: "1 USD = 100 GSC", verified: true },
+  { slug: "desert-coins", name: "Desert Coins", region: "MENA · Turkey", methods: "Local cards, Papara, STC Pay", rate: "1 USD = 100 GSC", verified: true },
+  { slug: "cryptobridge", name: "CryptoBridge", region: "Worldwide", methods: "USDT, USDC, BTC, ETH", rate: "1 USD = 100 GSC", verified: true },
+  { slug: "sea-wallet", name: "SEA Wallet", region: "Thailand · Malaysia · Singapore", methods: "PromptPay, DuitNow, PayNow", rate: "1 USD = 100 GSC", verified: false },
 ];
 
 const FEATURES = [
@@ -31,6 +33,20 @@ const FAQ = [
   { q: "How do I become a merchant?", a: "Submit a request through Support with the topic “Other” and describe your region and payment methods. Merchants must pass extended verification and keep a deposit." },
   { q: "What if a merchant does not deliver?", a: `Merchant purchases are orders like any other and are covered by ${BRAND.protection}. Open a dispute from the order page.` },
 ];
+
+const MerchantMark = ({ slug, name }: { slug: string; name: string }) => {
+  const src = merchantLogo(slug);
+  return src ? (
+    <Image src={src} alt={`${name} logo`} width={32} height={32} className="size-8 rounded-lg object-cover" />
+  ) : (
+    <span
+      aria-hidden
+      className="flex size-8 items-center justify-center rounded-lg bg-gradient-to-br from-fuchsia-500 via-purple-500 to-indigo-500 text-xs font-bold text-white"
+    >
+      {name[0]}
+    </span>
+  );
+};
 
 export default function CoinsMerchantsPage() {
   return (
@@ -70,7 +86,8 @@ export default function CoinsMerchantsPage() {
               {MERCHANTS.map((merchant) => (
                 <tr key={merchant.name}>
                   <td className="px-5 py-3 font-medium text-zinc-900">
-                    <span className="flex items-center gap-1.5">
+                    <span className="flex items-center gap-2.5">
+                      <MerchantMark slug={merchant.slug} name={merchant.name} />
                       {merchant.name}
                       {merchant.verified && <BadgeCheck className="size-4 text-sky-500" aria-label="Verified merchant" />}
                     </span>

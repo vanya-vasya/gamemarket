@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GameTile } from "@/components/game-tile";
+import { newsCover } from "@/lib/assets";
 import { ListingCard } from "@/components/listing-card";
 import { NewsCard } from "@/components/news-card";
 import { Breadcrumbs, SectionHeading } from "@/components/page-blocks";
@@ -48,7 +49,11 @@ export default async function ArticlePage({ params }: { params: Params }) {
         <GameTile
           slug={article.gameSlug}
           label={game?.short ?? article.gameName.slice(0, 3).toUpperCase()}
+          src={newsCover(article)}
+          alt={article.title}
           size="lg"
+          sizes="(min-width: 768px) 768px, 100vw"
+          priority
           className="mt-8 aspect-[16/8] w-full rounded-2xl"
         />
         <div className="mt-8 space-y-5">

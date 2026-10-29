@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ListingCard } from "@/components/listing-card";
 import { Breadcrumbs, SectionHeading } from "@/components/page-blocks";
 import { ReviewCard } from "@/components/review-card";
+import { SellerAvatar } from "@/components/seller-avatar";
 import { BRAND } from "@/lib/brand";
 import { REVIEWS, SELLERS, getSeller, getSellerListings } from "@/lib/listings";
 
@@ -31,9 +32,7 @@ export default async function SellerProfilePage({ params }: { params: Params }) 
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
       <Breadcrumbs items={[{ href: "/market", label: "All Markets" }, { label: seller.handle }]} />
       <section className="card-panel mt-6 flex flex-col gap-6 p-6 sm:flex-row sm:items-center sm:p-8">
-        <span className="flex size-20 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-fuchsia-500 via-purple-500 to-indigo-500 text-3xl font-bold text-white">
-          {seller.handle[0]}
-        </span>
+        <SellerAvatar handle={seller.handle} size="lg" />
         <div className="min-w-0 flex-1">
           <h1 className="flex items-center gap-2 text-3xl font-bold tracking-tight">
             {seller.handle}

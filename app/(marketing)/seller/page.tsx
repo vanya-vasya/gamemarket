@@ -19,7 +19,9 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HeroArt, HeroGrid } from "@/components/hero-art";
 import { Cta, FaqList, FeatureGrid, SectionHeading, Steps } from "@/components/page-blocks";
+import { siteImage } from "@/lib/assets";
 import { BRAND } from "@/lib/brand";
 
 export const metadata: Metadata = {
@@ -121,7 +123,9 @@ export default function SellerPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6">
       <section className="py-16 md:py-24">
-        <div className="max-w-3xl">
+        <HeroGrid
+          art={<HeroArt src={siteImage("seller-hero")} alt="Seller dashboard with instant payouts and order chats" />}
+        >
           <span className="chip">Free listings · 0% commission · Instant payouts</span>
           <h1 className="mt-6 text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
             Turn Your Game Stock Into <span className="text-gradient">Global Income</span>
@@ -141,7 +145,7 @@ export default function SellerPage() {
               See How It Works
             </Link>
           </div>
-        </div>
+        </HeroGrid>
       </section>
 
       <section className="py-12">

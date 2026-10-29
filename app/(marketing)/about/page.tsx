@@ -9,7 +9,9 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HeroArt, HeroGrid } from "@/components/hero-art";
 import { FeatureGrid, SectionHeading } from "@/components/page-blocks";
+import { siteImage } from "@/lib/assets";
 import { BRAND } from "@/lib/brand";
 
 export const metadata: Metadata = {
@@ -51,7 +53,9 @@ export default function AboutPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6">
       <section className="py-16 md:py-24">
-        <div className="max-w-3xl">
+        <HeroGrid
+          art={<HeroArt src={siteImage("about-hero")} alt="Global community of gamers trading digital assets" />}
+        >
           <span className="chip">About us</span>
           <h1 className="mt-6 text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl">
             {BRAND.name} - Trusted Digital Marketplace for{" "}
@@ -63,7 +67,7 @@ export default function AboutPage() {
             maxed-out MMORPG account or buying rare items with various payment
             methods, we&apos;re here to power your next trade.
           </p>
-        </div>
+        </HeroGrid>
       </section>
 
       <section className="py-12">
