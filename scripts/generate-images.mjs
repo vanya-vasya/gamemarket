@@ -60,10 +60,22 @@ console.log(`${selected.length} task(s) to generate with ${MODEL}${dryRun ? " (d
 // Avatars and merchant marks end up at 512px, so 1K output is enough and cheaper.
 const resolutionFor = (task) => (task.aspect_ratio === "1:1" ? "1K" : "2K");
 
+const FRAMING_RULE =
+  " Full-bleed composition that fills the entire frame edge to edge: no black bars, no letterboxing, no empty or blurred borders, no inset frame, no vignette-to-black corners.";
+
+const MAX_CANDIDATES = 3;
+
+// The model sometimes returns a picture with solid black blocks or bars along the edges.
+const blackFraction = async (buffer) => {
+  const { data } = await sharp(buffer).resize(128, 96, { fit: "fill" }).greyscale().raw().toBuffer({ resolveWithObject: true });
+  return data.filter((value) => value < 6).length / data.length;
+};
+const MAX_BLACK_FRACTION = 0.03;
+
 const generate = async (task) => {
   const body = {
     model: MODEL,
-    prompt: task.prompt,
+    prompt: task.prompt + FRAMING_RULE,
     aspect_ratio: task.aspect_ratio,
     resolution: resolutionFor(task),
     n: 1,
@@ -104,7 +116,18 @@ for (const [index, task] of selected.entries()) {
   console.log(`[${index + 1}/${selected.length}] ${task.id} (${task.aspect_ratio}, ${resolutionFor(task)})`);
   if (dryRun) continue;
   try {
-    const { buffer, cost } = await generate(task);
+    let best;
+    let cost = 0;
+    for (let candidate = 1; candidate <= MAX_CANDIDATES; candidate++) {
+      const result = await generate(task);
+      cost += result.cost ?? 0;
+      const black = await blackFraction(result.buffer);
+      if (!best || black < best.black) best = { buffer: result.buffer, black };
+      if (black <= MAX_BLACK_FRACTION) break;
+      console.log(`   candidate ${candidate}: ${(black * 100).toFixed(1)}% black, regenerating`);
+    }
+    const { buffer } = best;
+    if (best.black > MAX_BLACK_FRACTION) console.warn(`   WARNING ${task.id}: still ${(best.black * 100).toFixed(1)}% black after ${MAX_CANDIDATES} candidates, check by eye`);
     const meta = await sharp(buffer).metadata();
     if (previewDir) {
       mkdirSync(previewDir, { recursive: true });
@@ -118,7 +141,7 @@ for (const [index, task] of selected.entries()) {
     writeFileSync(task.path, out);
     spent += cost ?? 0;
     done++;
-    console.log(`   saved ${task.path}  source ${meta.width}x${meta.height} -> ${width}x${height}, ${(out.length / 1024).toFixed(0)} KB${cost != null ? `, $${cost}` : ""}`);
+    console.log(`   saved ${task.path}  source ${meta.width}x${meta.height} -> ${width}x${height}, ${(out.length / 1024).toFixed(0)} KB${cost ? `, $${cost.toFixed(4)}` : ""}`);
   } catch (error) {
     failed.push(task.id);
     console.error(`   FAILED ${task.id}: ${String(error).slice(0, 500)}`);
