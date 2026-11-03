@@ -61,7 +61,7 @@ console.log(`${selected.length} task(s) to generate with ${MODEL}${dryRun ? " (d
 const resolutionFor = (task) => (task.aspect_ratio === "1:1" ? "1K" : "2K");
 
 const FRAMING_RULE =
-  " Full-bleed composition that fills the entire frame edge to edge: no black bars, no letterboxing, no empty or blurred borders, no inset frame, no vignette-to-black corners.";
+  " Full-bleed composition that fills the entire frame edge to edge: no black bars, no letterboxing, no empty or blurred borders, no inset frame, no vignette-to-black corners, and never draw color swatches, palette chips, hex codes or any text.";
 
 const MAX_CANDIDATES = 3;
 
