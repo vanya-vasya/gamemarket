@@ -7,7 +7,10 @@ export const runtime = "nodejs";
 export const POST = async (request: NextRequest) => {
   let event;
   try {
-    event = await verifyWebhook(request);
+    event = await verifyWebhook(request, {
+      signingSecret:
+        process.env.CLERK_WEBHOOK_SIGNING_SECRET ?? process.env.CLERK_SIGNING_SECRET,
+    });
   } catch {
     return new Response("Invalid webhook signature", { status: 400 });
   }
