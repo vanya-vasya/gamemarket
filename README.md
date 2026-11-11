@@ -6,7 +6,7 @@ Marketplace for game accounts, boosting, top ups, items and hourly services acro
 
 - Next.js 15 (App Router, TypeScript) on Vercel
 - Tailwind CSS v4 (`app/globals.css` holds the theme and the `btn-gradient` / `card-panel` / `chip` / `section-label` utilities)
-- Geist / Geist Mono via `next/font`, lucide-react icons, sonner toasts
+- Geist / Geist Mono via `next/font`, lucide-react icons, sonner toasts, Clerk auth
 
 ## Structure
 
@@ -16,7 +16,12 @@ Marketplace for game accounts, boosting, top ups, items and hourly services acro
 - `lib/news.ts`, `lib/faq.ts` — editorial and FAQ content
 - `app/(marketing)` — all routes: `/`, `/market`, `/market/[game]`, `/market/[game]/[category]`, `/market/[game]/[category]/[id]`, `/seller`, `/seller/[handle]`, `/affiliate`, `/about`, `/faq`, `/support`, `/news`, `/news/[slug]`, `/coins-merchants`, `/terms-of-service`, `/privacy-policy`, plus `/login`, `/signup`, `/orders`, `/notifications`, `/chat`, `/account`
 
-Authentication, payments and the database are intentionally not wired yet; account pages render a sign-in gate.
+Authentication is handled by Clerk (`@clerk/nextjs`): `middleware.ts` protects `/orders`, `/chat`, `/notifications` and `/account`; `/login` and `/signup` embed Clerk's `<SignIn />` / `<SignUp />`; the header shows a `<UserButton />` when signed in. Payments and the database are intentionally not wired yet.
+
+### Environment variables
+
+- `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`, `CLERK_SECRET_KEY` — required (set on Vercel; locally put them in `.env.local`)
+- `CLERK_SIGNING_SECRET` — reserved for Clerk webhook verification (no webhook route yet)
 
 ## Images
 
