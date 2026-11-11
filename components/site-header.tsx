@@ -7,6 +7,7 @@ import {
   Search,
 } from "lucide-react";
 import Link from "next/link";
+import { AuthControls } from "@/components/auth-controls";
 import { Logo } from "@/components/logo";
 
 const NAV = [
@@ -78,12 +79,7 @@ export const SiteHeader = () => {
                 </Link>
               ))}
             </nav>
-            <Link
-              href="/login"
-              className="text-sm text-zinc-700 transition-colors hover:text-zinc-900"
-            >
-              Sign in
-            </Link>
+            <AuthControls />
             <Link href="/seller" className="btn-gradient px-4 py-2 text-sm">
               Sell now
             </Link>

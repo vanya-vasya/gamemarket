@@ -1,8 +1,10 @@
+import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster } from "sonner";
 import { siteImage } from "@/lib/assets";
 import { BRAND } from "@/lib/brand";
+import { CLERK_APPEARANCE } from "@/lib/clerk";
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -32,8 +34,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} page-glow min-h-screen font-sans`}
       >
-        {children}
-        <Toaster theme="light" position="bottom-right" />
+        <ClerkProvider
+          signInUrl="/login"
+          signUpUrl="/signup"
+          signInFallbackRedirectUrl="/"
+          signUpFallbackRedirectUrl="/"
+          appearance={{ variables: CLERK_APPEARANCE.variables }}
+        >
+          {children}
+          <Toaster theme="light" position="bottom-right" />
+        </ClerkProvider>
       </body>
     </html>
   );

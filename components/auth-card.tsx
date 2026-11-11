@@ -1,7 +1,9 @@
+import { SignIn, SignUp } from "@clerk/nextjs";
 import { ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import { Logo } from "@/components/logo";
 import { BRAND } from "@/lib/brand";
+import { CLERK_APPEARANCE } from "@/lib/clerk";
 
 const PERKS = [
   `Every order covered by ${BRAND.protection}`,
@@ -49,65 +51,21 @@ export const AuthCard = ({
       </div>
 
       <div className="card-panel p-6 sm:p-8">
-        <h2 className="text-lg font-semibold text-zinc-900">
-          {isLogin ? "Sign in" : "Create account"}
-        </h2>
-        <form className="mt-5 space-y-4" action={isLogin ? "/login" : "/signup"} method="get">
-          <input type="hidden" name="pending" value="1" />
-          {next && <input type="hidden" name="next" value={next} />}
-          {!isLogin && (
-            <label className="block text-sm">
-              <span className="font-medium text-zinc-700">Username</span>
-              <input
-                name="username"
-                required
-                autoComplete="username"
-                className="mt-1.5 h-11 w-full rounded-xl border border-zinc-200 bg-white px-4 text-sm outline-none focus:border-purple-400"
-              />
-            </label>
-          )}
-          <label className="block text-sm">
-            <span className="font-medium text-zinc-700">Email</span>
-            <input
-              type="email"
-              name="email"
-              required
-              autoComplete="email"
-              className="mt-1.5 h-11 w-full rounded-xl border border-zinc-200 bg-white px-4 text-sm outline-none focus:border-purple-400"
-            />
-          </label>
-          <label className="block text-sm">
-            <span className="font-medium text-zinc-700">Password</span>
-            <input
-              type="password"
-              name="password"
-              required
-              minLength={8}
-              autoComplete={isLogin ? "current-password" : "new-password"}
-              className="mt-1.5 h-11 w-full rounded-xl border border-zinc-200 bg-white px-4 text-sm outline-none focus:border-purple-400"
-            />
-          </label>
-          <button type="submit" className="btn-gradient w-full px-6 py-3 text-sm">
-            {isLogin ? "Sign in" : "Create account"}
-          </button>
-        </form>
-        <p className="mt-4 text-center text-xs text-zinc-500">
-          {isLogin ? (
-            <>
-              New here?{" "}
-              <Link href="/signup" className="font-medium text-purple-600 hover:text-purple-500">
-                Create an account
-              </Link>
-            </>
-          ) : (
-            <>
-              Already have an account?{" "}
-              <Link href="/login" className="font-medium text-purple-600 hover:text-purple-500">
-                Sign in
-              </Link>
-            </>
-          )}
-        </p>
+        {isLogin ? (
+          <SignIn
+            path="/login"
+            signUpUrl="/signup"
+            fallbackRedirectUrl={next}
+            appearance={CLERK_APPEARANCE}
+          />
+        ) : (
+          <SignUp
+            path="/signup"
+            signInUrl="/login"
+            fallbackRedirectUrl={next}
+            appearance={CLERK_APPEARANCE}
+          />
+        )}
         <p className="mt-6 border-t border-black/5 pt-4 text-center text-xs text-zinc-400">
           By continuing you agree to the{" "}
           <Link href="/terms-of-service" className="hover:text-zinc-700">
@@ -124,26 +82,7 @@ export const AuthCard = ({
   );
 };
 
-export const PendingNotice = ({ title, body }: { title: string; body: string }) => (
-  <div className="card-panel mx-auto my-16 max-w-xl p-8 text-center">
-    <Logo />
-    <h1 className="mt-6 text-2xl font-bold tracking-tight">{title}</h1>
-    <p className="mt-3 text-sm leading-relaxed text-zinc-600">{body}</p>
-    <div className="mt-6 flex flex-wrap justify-center gap-3">
-      <Link href="/market" className="btn-gradient px-6 py-2.5 text-sm">
-        Browse markets
-      </Link>
-      <Link
-        href="/support"
-        className="rounded-full border border-zinc-300 px-6 py-2.5 text-sm text-zinc-700 hover:border-zinc-400"
-      >
-        Contact support
-      </Link>
-    </div>
-  </div>
-);
-
-export const AccountGate = ({
+export const AccountPlaceholder = ({
   title,
   body,
   icon: Icon,
@@ -159,15 +98,9 @@ export const AccountGate = ({
       </span>
       <h1 className="mt-5 text-2xl font-bold tracking-tight">{title}</h1>
       <p className="mt-3 text-sm leading-relaxed text-zinc-600">{body}</p>
-      <div className="mt-6 flex flex-wrap justify-center gap-3">
-        <Link href="/login" className="btn-gradient px-6 py-2.5 text-sm">
-          Sign in
-        </Link>
-        <Link
-          href="/signup"
-          className="rounded-full border border-zinc-300 px-6 py-2.5 text-sm text-zinc-700 hover:border-zinc-400"
-        >
-          Create account
+      <div className="mt-6 flex justify-center">
+        <Link href="/market" className="btn-gradient px-6 py-2.5 text-sm">
+          Browse markets
         </Link>
       </div>
     </div>
