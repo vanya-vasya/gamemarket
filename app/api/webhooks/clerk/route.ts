@@ -9,7 +9,7 @@ export const POST = async (request: NextRequest) => {
   try {
     event = await verifyWebhook(request, {
       signingSecret:
-        process.env.CLERK_WEBHOOK_SIGNING_SECRET ?? process.env.CLERK_SIGNING_SECRET,
+        process.env.CLERK_WEBHOOK_SIGNING_SECRET ?? process.env.SIGNING_SECRET,
     });
   } catch {
     return new Response("Invalid webhook signature", { status: 400 });
