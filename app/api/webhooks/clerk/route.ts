@@ -20,10 +20,14 @@ export const POST = async (request: NextRequest) => {
   }
 
   const { data } = event;
-  const email = data.email_addresses.find(
-    (address) => address.id === data.primary_email_address_id,
-  )?.email_address;
-  if (!email) return new Response("No primary email", { status: 400 });
+  const primaryAddress =
+    data.email_addresses.find((address) => address.id === data.primary_email_address_id) ??
+    data.email_addresses[0];
+  const email = primaryAddress?.email_address;
+  if (!email) {
+    console.warn("Clerk webhook: user has no email address, skipping", data.id);
+    return new Response("No email address, skipped", { status: 200 });
+  }
 
   try {
     await upsertUser({
